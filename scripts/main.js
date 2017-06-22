@@ -10,11 +10,41 @@
 */
 
 
-function handValue (hand) {
+function handValue(handArray){
+
+  var handTotal = 0;
+
+  //console.log(handArray);
+
+  for(var index = 0; index < handArray.length; index++) {
+    
+    var card = handArray[index];
+    //console.log(card);
 
 
-  return;
+
+    if(card == "A") {
+
+      card == 11;
+
+    }
+    else if(card == "K" || card == "Q" || card == "J") {
+      //if card has a value of "K", "Q" or "J"
+      card = 10;
+    }
+    else {
+      //if the card does not have one of those three values
+      card = parseInt(card);
+    }
+
+    handTotal = handTotal + card;
+
+  }
+
+  return handTotal;
 }
+
+console.log(handValue(["Q", "4", "K"]))
 
 
 /* -----  Hints ------
